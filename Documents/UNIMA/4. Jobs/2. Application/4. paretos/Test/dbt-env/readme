@@ -1,0 +1,38 @@
+# Project Description and Goal
+
+## Description
+This project aims to demonstrate the setup of a small Extract, Load, Transform (ELT) pipeline using dbt (data build tool). The focus is on understanding the essential components and considerations in such a setup.
+
+## Goal
+The goal of this project is to showcase the process of setting up a basic ELT pipeline using dbt, highlighting what aspects are considered important and what can be deemed less critical in such a setup.
+
+## Use Case Description
+Data has been extracted from an external source and stored in a database across multiple tables. The objective is to extract relevant data from these tables, perform necessary transformations, and consolidate them into a single table for further analysis, typically aimed at machine learning tasks. dbt will be utilized for transforming raw data into its final usable format.
+
+## Tasks
+- Initialize a git repository for the project.
+- Set up a suitable database (PostgreSQL recommended) and import provided data.
+- Configure dbt to transform the imported tables:
+  - Orders meta information
+  - Order line items
+  - Cost per SKU (Stock Keeping Unit) (with some costs possibly missing)
+- Design a strategy to merge data from various sources into a comprehensive table for daily reporting, deciding on the included information and model organization.
+- Define two key performance indicators (KPIs) crucial for end-users:
+  1. Margin per day: Calculated as revenue minus total cost of SKUs in each order.
+  2. Total number of orders per day: Aids in logistics management.
+
+## Using the Starter Project
+To get started with the provided project, execute the following commands:
+- `dbt run`
+- `dbt test`
+
+## Requirements
+- PostgreSQL
+- dbt and dbt connector with PostgreSQL (requirements.txt)
+
+## Resources
+- Learn more about dbt in the [official documentation](https://docs.getdbt.com/docs/introduction).
+- Visit [Discourse](https://discourse.getdbt.com/) for frequently asked questions and answers.
+- Join the live discussions and seek support on Slack via [dbt's community chat](https://community.getdbt.com/).
+- Explore [dbt events](https://events.getdbt.com) happening near you.
+- Stay updated with the latest news and best practices in dbt's development through [the blog](https://blog.getdbt.com/).
